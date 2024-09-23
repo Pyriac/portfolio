@@ -1,6 +1,7 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import Project from "./components/Project.vue";
+import projectData from "./data/project";
 </script>
 
 <template>
@@ -15,7 +16,9 @@ import Project from "./components/Project.vue";
     <HelloWorld msg="Bienvenue" />
   </header>
   <section>
-    <Project />
+    <article v-for="project in projectData" :key="project.name">
+      <Project :project="project" />
+    </article>
   </section>
 </template>
 
