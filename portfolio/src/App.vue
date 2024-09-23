@@ -1,16 +1,22 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
+import Project from "./components/Project.vue";
 </script>
 
 <template>
-  <div>
-    <img
-      class="header"
-      src="./assets/Header.jpg"
-      alt="Illustration d'un bureau avec une tasse de café, un ordinateur et une fenêtre qui donne sur des montagnes"
-    />
-  </div>
-  <HelloWorld msg="Bienvenue" />
+  <header>
+    <div>
+      <img
+        class="header"
+        src="./assets/Header.jpg"
+        alt="Illustration d'un bureau avec une tasse de café, un ordinateur et une fenêtre qui donne sur des montagnes"
+      />
+    </div>
+    <HelloWorld msg="Bienvenue" />
+  </header>
+  <section>
+    <Project />
+  </section>
 </template>
 
 <style scoped>
