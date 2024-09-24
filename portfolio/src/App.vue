@@ -13,7 +13,7 @@ import projectData from "./data/project";
         alt="Illustration d'un bureau avec une tasse de café, un ordinateur et une fenêtre qui donne sur des montagnes"
       />
     </div>
-    <HelloWorld msg="Bienvenue" />
+    <HelloWorld />
   </header>
   <section>
     <article v-for="project in projectData" :key="project.name">
