@@ -30,4 +30,9 @@ img {
   margin-right: auto;
   filter: drop-shadow(0px 8px 50px rgba(231, 111, 81, 0.4));
 }
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 </style>

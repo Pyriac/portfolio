@@ -11,9 +11,10 @@ const project = [
   },
   {
     name: "Work-diary",
-    description: "",
-    technologies: "",
-    image: "",
+    description:
+      "Projet full-stack personnel répondant à une problématique des micro-entreprises en leur proposant un suivi de leurs tâches et de leur disponibilité.",
+    technologies: "React, Node.js, Express, MySQL",
+    image: "work-d.png",
     github: "https://github.com/Pyriac/work-diary",
     website: "",
   },
