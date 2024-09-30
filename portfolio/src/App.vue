@@ -23,6 +23,12 @@ import projectData from "./data/project";
 </template>
 
 <style scoped>
+.header {
+  width: 96vw;
+  margin-top: 10vh;
+  border-radius: 100px;
+}
+
 img {
   display: block;
   margin-top: 10vh;

@@ -25,12 +25,6 @@ a {
   all: unset;
 }
 
-.header {
-  width: 96vw;
-  margin-top: 10vh;
-  border-radius: 100px;
-}
-
 h1 {
   font-family: var(--tilte-font);
   color: var(--first-yellow);

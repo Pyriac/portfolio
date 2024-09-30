@@ -23,7 +23,7 @@ const toUpperCase = (str) => {
           alt="Liens vers le repository github"
         />
       </a>
-      <a href="">
+      <a :href="`${project.website}`">
         <img
           class="link"
           v-if="project.website"
