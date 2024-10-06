@@ -11,7 +11,7 @@ const toUpperCase = (str) => {
 <template>
   <div class="border" v-if="project">
     <h2>{{ toUpperCase(project.name) }}</h2>
-    <img :src="`public/images/${project.image}`" alt="" />
+    <img :src="`images/${project.image}`" alt="" />
     <p>{{ project.description }}</p>
     <p class="technologies">{{ project.technologies }}</p>
     <div class="link-zone">
@@ -19,7 +19,7 @@ const toUpperCase = (str) => {
         <img
           class="link"
           v-if="project.github"
-          src="../../public/GitHub.png"
+          src="/GitHub.png"
           alt="Liens vers le repository github"
         />
       </a>
@@ -27,7 +27,7 @@ const toUpperCase = (str) => {
         <img
           class="link"
           v-if="project.website"
-          src="../../public/website.png"
+          src="/website.png"
           alt="Liens vers le site internet"
         />
       </a>
