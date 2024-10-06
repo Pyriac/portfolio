@@ -25,7 +25,8 @@ a {
   all: unset;
 }
 
-h1 {
+h1,
+h2 {
   font-family: var(--tilte-font);
   color: var(--first-yellow);
   text-align: center;

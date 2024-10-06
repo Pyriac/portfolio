@@ -39,10 +39,16 @@ p {
 @media (min-width: 998px) {
   h1 {
     font-size: 3rem;
+    margin-left: 4rem;
+    text-align: left;
   }
   p {
     font-size: 1.2rem;
-    margin: 2rem;
+    margin: 0;
+    width: 80%;
+  }
+  .card {
+    align-items: flex-start;
   }
 }
 </style>

@@ -10,7 +10,7 @@ const toUpperCase = (str) => {
 
 <template>
   <div class="border" v-if="project">
-    <h1>{{ toUpperCase(project.name) }}</h1>
+    <h2>{{ toUpperCase(project.name) }}</h2>
     <img :src="`public/images/${project.image}`" alt="" />
     <p>{{ project.description }}</p>
     <p class="technologies">{{ project.technologies }}</p>
@@ -73,5 +73,13 @@ p {
 
 a {
   margin-left: 6%;
+}
+@media (min-width: 998px) {
+  p {
+    font-size: 1.2rem;
+  }
+  .link {
+    width: 2.5rem;
+  }
 }
 </style>
