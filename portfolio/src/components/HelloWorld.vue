@@ -1,6 +1,24 @@
+<script>
+export default {
+  data() {
+    return {
+      isVisible: false,
+    };
+  },
+  mounted() {
+    this.timer = setTimeout(() => {
+      this.isVisible = true;
+    }, 0);
+  },
+  beforeDestroy() {
+    clearTimeout(this.timer);
+  },
+};
+</script>
+
 <template>
-  <div class="welcome">
-    <h1>BIENVENUE</h1>
+  <div :class="['welcome', { 'welcome-active': isVisible }]">
+    <h1 :class="['bienvenue', { 'bienvenue-active': isVisible }]">BIENVENUE</h1>
 
     <div class="card">
       <p>
@@ -16,14 +34,23 @@
 </template>
 
 <style scoped>
-h1 {
+.bienvenue {
   margin-top: 3rem;
+  font-size: 2.5rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--first-yellow);
+  color: #264653;
+  letter-spacing: 0.2rem;
+  transition: color 6s ease-in;
 }
-
+.bienvenue-active {
+  color: var(--first-yellow);
+}
 .welcome {
   display: flex;
   flex-direction: column;
 }
+
 p {
   width: 80%;
   font-weight: 500;
@@ -37,8 +64,8 @@ p {
 }
 
 @media (min-width: 998px) {
-  h1 {
-    font-size: 3rem;
+  .bienvenue {
+    font-size: 3.5rem;
     margin-left: 4rem;
     text-align: left;
   }

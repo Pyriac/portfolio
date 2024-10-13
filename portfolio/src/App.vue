@@ -4,8 +4,26 @@ import Project from "./components/Project.vue";
 import projectData from "./data/project";
 </script>
 
+<script>
+export default {
+  data() {
+    return {
+      isVisible: false,
+    };
+  },
+  mounted() {
+    this.timer = setTimeout(() => {
+      this.isVisible = true;
+    }, 0);
+  },
+  beforeDestroy() {
+    clearTimeout(this.timer);
+  },
+};
+</script>
+
 <template>
-  <header>
+  <header :class="['header', { 'header-active': isVisible }]">
     <img
       class="header-img"
       src="./assets/Header.jpg"
@@ -13,13 +31,15 @@ import projectData from "./data/project";
     />
     <HelloWorld class="Hello" />
   </header>
-  <div class="separator"></div>
-  <h2>MES PROJETS</h2>
-  <section>
-    <article v-for="project in projectData" :key="project.name">
-      <Project :project="project" />
-    </article>
-  </section>
+  <main :class="['main', { 'main-active': isVisible }]">
+    <div class="separator"></div>
+    <h2>MES PROJETS</h2>
+    <section>
+      <article v-for="project in projectData" :key="project.name">
+        <Project :project="project" />
+      </article>
+    </section>
+  </main>
 </template>
 
 <style scoped>
@@ -29,13 +49,36 @@ import projectData from "./data/project";
   border-radius: 100px;
 }
 
+.main {
+  opacity: 0;
+  transition: opacity 3s ease-in;
+}
+
+.main-active {
+  opacity: 1;
+}
+
+.header {
+  opacity: 0;
+  transition: opacity 3s ease-in;
+}
+
+.header-active {
+  opacity: 1;
+}
+
 img {
   display: block;
   margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
   filter: drop-shadow(0px 8px 50px rgba(231, 111, 81, 0.4));
+  transition: filter 0.5s ease;
 }
+img:hover {
+  filter: drop-shadow(0px 8px 50px rgba(231, 111, 81, 0.6));
+}
+
 article {
   display: flex;
   flex-direction: column;
@@ -58,7 +101,7 @@ article {
     padding-top: 5vh;
     font-size: 2rem;
   }
-  header {
+  .header {
     display: flex;
     flex-direction: row-reverse;
     margin-top: 25vh;

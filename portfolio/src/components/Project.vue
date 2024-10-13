@@ -48,7 +48,13 @@ const toUpperCase = (str) => {
   border: solid 1px #2a9d8f;
   border-radius: 1rem;
   box-shadow: 4px 4px 10px rgba(42, 157, 143, 0.25);
+  transition: box-shadow 0.5s ease;
 }
+
+.border:hover {
+  box-shadow: 4px 4px 20px rgba(42, 157, 143, 0.5);
+}
+
 img {
   width: 88%;
 }
