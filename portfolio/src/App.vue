@@ -1,8 +1,5 @@
 <script setup>
 import { RouterLink } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import Project from "./components/Project.vue";
-import projectData from "./data/project";
 </script>
 
 <script>
