@@ -17,7 +17,7 @@ export default {
 </script>
 
 <template>
-  <div :class="['welcome', { 'welcome-active': isVisible }]">
+  <div class="welcome">
     <h1 :class="['bienvenue', { 'bienvenue-active': isVisible }]">BIENVENUE</h1>
 
     <div class="card">
@@ -40,11 +40,12 @@ export default {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--first-yellow);
   color: #264653;
-  letter-spacing: 0.2rem;
-  transition: color 6s ease-in;
+  letter-spacing: 0.3rem;
+  transform: rotateY(10deg);
+  transition: transform 3s ease-in;
 }
 .bienvenue-active {
-  color: var(--first-yellow);
+  transform: rotateY(0deg);
 }
 .welcome {
   display: flex;

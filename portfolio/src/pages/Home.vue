@@ -1,8 +1,5 @@
 <script setup>
-import { RouterLink } from "vue-router";
-import HelloWorld from "./components/HelloWorld.vue";
-import Project from "./components/Project.vue";
-import projectData from "./data/project";
+import HelloWorld from "../components/HelloWorld.vue";
 </script>
 
 <script>
@@ -24,13 +21,14 @@ export default {
 </script>
 
 <template>
-  <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/projects">Mes projets</RouterLink>
-  </nav>
-  <main>
-    <RouterView />
-  </main>
+  <section :class="['header', { 'header-active': isVisible }]">
+    <img
+      class="header-img"
+      src="../assets/Header.jpg"
+      alt="Illustration d'un bureau avec une tasse de café, un ordinateur et une fenêtre qui donne sur des montagnes"
+    />
+    <HelloWorld class="Hello" />
+  </section>
 </template>
 
 <style scoped>
