@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink } from "vue-router";
 defineProps({
   project: Object,
 });
@@ -10,10 +11,12 @@ const toUpperCase = (str) => {
 
 <template>
   <div class="border" v-if="project">
-    <h2>{{ toUpperCase(project.name) }}</h2>
-    <img :src="`images/${project.image}`" alt="" />
-    <p>{{ project.description }}</p>
-    <p class="technologies">{{ project.technologies }}</p>
+    <RouterLink :to="{ path: `/project/${project.name}` }">
+      <h2>{{ toUpperCase(project.name) }}</h2>
+      <img :src="`images/${project.image}`" alt="" />
+      <p>{{ project.description }}</p>
+      <p class="technologies">{{ project.technologies }}</p>
+    </RouterLink>
     <div class="link-zone">
       <a :href="`${project.github}`" target="_blank">
         <img
@@ -23,7 +26,7 @@ const toUpperCase = (str) => {
           alt="Liens vers le repository github"
         />
       </a>
-      <a :href="`${project.website}`">
+      <a :href="`${project.website}`" target="_blank">
         <img
           class="link"
           v-if="project.website"

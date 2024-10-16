@@ -57,6 +57,9 @@ a {
   margin-left: 6%;
 }
 @media (min-width: 998px) {
+  article {
+    width: 33%;
+  }
   p {
     font-size: 1.2rem;
   }

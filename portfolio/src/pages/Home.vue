@@ -40,7 +40,7 @@ export default {
 
 .main {
   opacity: 0;
-  transition: opacity 3s ease-in;
+  transition: opacity 2s ease-in;
 }
 
 .main-active {
@@ -49,7 +49,7 @@ export default {
 
 .header {
   opacity: 0;
-  transition: opacity 3s ease-in;
+  transition: opacity 2s ease-in;
 }
 
 .header-active {
@@ -62,7 +62,7 @@ img {
   margin-left: auto;
   margin-right: auto;
   filter: drop-shadow(0px 8px 50px rgba(231, 111, 81, 0.4));
-  transition: filter 0.5s ease;
+  transition: filter 0.3s ease;
 }
 img:hover {
   filter: drop-shadow(0px 8px 50px rgba(231, 111, 81, 0.6));
